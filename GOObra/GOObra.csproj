@@ -32,9 +32,36 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GoObra_transparene.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\csharp_Sqlite\csharp_Sqlite\csharp_Sqlite\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +73,131 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Controller\Calculo.cs" />
+    <Compile Include="Controller\DalHelper.cs" />
+    <Compile Include="Controller\Diretorio.cs" />
+    <Compile Include="Controller\EntradaController.cs" />
+    <Compile Include="Controller\FornecedorController.cs" />
+    <Compile Include="Controller\Pdf.cs" />
+    <Compile Include="Controller\ProdutosController.cs" />
+    <Compile Include="Controller\Util.cs" />
+    <Compile Include="frmBD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmBD.Designer.cs">
+      <DependentUpon>frmBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\cl_Variaveis.cs" />
+    <Compile Include="Model\EntradaModel.cs" />
+    <Compile Include="Model\FornecedorModel.cs" />
+    <Compile Include="Model\ProdutosModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmAlterarBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAlterarBanco.Designer.cs">
+      <DependentUpon>frmAlterarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEditaEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEditaEntrada.Designer.cs">
+      <DependentUpon>frmEditaEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEntrada.Designer.cs">
+      <DependentUpon>frmEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmErro.Designer.cs">
+      <DependentUpon>frmErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmFornecedor.Designer.cs">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmGrafico.Designer.cs">
+      <DependentUpon>frmGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmListaFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmListaFornecedores.Designer.cs">
+      <DependentUpon>frmListaFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmListaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmListaProduto.Designer.cs">
+      <DependentUpon>frmListaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmNovaEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNovaEntrada.Designer.cs">
+      <DependentUpon>frmNovaEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmOrdem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOrdem.Designer.cs">
+      <DependentUpon>frmOrdem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProdutoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProdutoEditar.Designer.cs">
+      <DependentUpon>frmProdutoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProdutos.Designer.cs">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmOrdemEdita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOrdemEdita.Designer.cs">
+      <DependentUpon>frmOrdemEdita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSuccess.Designer.cs">
+      <DependentUpon>frmSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_teste.Designer.cs">
+      <DependentUpon>frm_teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBD.resx">
+      <DependentUpon>frmBD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +206,60 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\frmAlterarBanco.resx">
+      <DependentUpon>frmAlterarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEditaEntrada.resx">
+      <DependentUpon>frmEditaEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEntrada.resx">
+      <DependentUpon>frmEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmErro.resx">
+      <DependentUpon>frmErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmGrafico.resx">
+      <DependentUpon>frmGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaFornecedores.resx">
+      <DependentUpon>frmListaFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaProduto.resx">
+      <DependentUpon>frmListaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNovaEntrada.resx">
+      <DependentUpon>frmNovaEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOrdem.resx">
+      <DependentUpon>frmOrdem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProdutoEditar.resx">
+      <DependentUpon>frmProdutoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProdutos.resx">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOrdemEdita.resx">
+      <DependentUpon>frmOrdemEdita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSuccess.resx">
+      <DependentUpon>frmSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_teste.resx">
+      <DependentUpon>frm_teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +272,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eidtar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="carrinho-de-mao.ico" />
+    <Content Include="GoObra_transparene.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -117,8 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="eidtar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eidtar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="descricao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="fabricante.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="fornecedor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="preco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="edite.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAAmJL
+        R0QAAKqNIzIAAAAHdElNRQfkAwQQOCywom3bAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTAzLTA0VDE2
+        OjU2OjQ0KzAwOjAwSl1kmwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wMy0wNFQxNjo1Njo0NCswMDow
+        MDsA3CcAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAABcElEQVRIS92Tvc6CMBSG
+        uQcG78TFHVf8QRMuQjeYwITFjYXEC3HTC5IQwoJsxvTrOZT2aIAPGl18khPb07c8UsBgXyAIAmYYBptM
+        JizPc/ZxyWKxQEFTIPqoBP81EcgyTZPpFGw+n8/i8vURAWVZvgjCMIRfYhxRcRzjRQHbtrE3nU5xfr/f
+        cQ5HB/Bx+0X66nA44Gbg/Rk0Iji6Bt5XAeD5fPbW4/HAHPAuaCqKIpGo4T21OIYuwXa7FQkF76vAUJbL
+        pdxDa7PZiMQrfE2FhrBarWSeFhUkSSJGNXxdBf9jiMD3fexR+FyF++gSOI4jEox5noc9+I4ovKc2dDGf
+        z2WGFhXcbjfZ15JYliUzTVEBkKapXBsluV6v7Hg84th1XZlbr9fYo2hLZrMZ9k+nE87hAcPRtaElga+b
+        rsFb04eWZL/fyz7c0eVyESvtaElgvtvt8I6GMFpSFIUYDUf7wY8hy7LvS6qqGib5VP2qhLE/i3xw2/hV
+        GR8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAAmJL
+        R0QAAKqNIzIAAAAHdElNRQfkAxATDxI8+a7VAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTAzLTE2VDE5
+        OjE1OjE4KzAwOjAwuYXzHwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wMy0xNlQxOToxNToxOCswMDow
+        MMjYS6MAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAABYklEQVRIS+2VP4qDQBSH
+        rVKkSZUbeAPbNKbLMVJECSE3SJkyV/AIHkG8gDfwBgEtBQuZ5RswzJ8HjhvYaj94zLy3870fZAsjFcDt
+        dlNRFHnFPAQr5Pl8qiRJ1OFw+FSapmq/34shzPm7+R6fPSZWyG63E5etLfaY/H3I4/FQ1+tV3e/3Xxc+
+        e0yC/vHf4oW8Xi/xJwgtfBcvpCgKUQ4tfBcvpCxLUQ4tfBcvpKoqUQ4tfBcvpGkaS4JhGPT9fD7rnpOe
+        OZjv8V28kLZtLQn6vtf3PM91z0nPHMz3+C5eyPv9tiTouk7fL5eL7jnpmYP5Ht/FCxnH0ZJgTQi+ixcC
+        pgRrQiT+Q3T/Vchms7Gk0BA8CTHE/BLCHJJlme456d0QPAkxJI7jjwjTNOk73wrgpGcO81s8CTGE7/Qs
+        urXdbsU5hSchhhyPR3HJUuFJiCGn00lcslR4EmJIXdfikqXC81HqB0SPTv2yfKmjAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>
