@@ -741,5 +741,29 @@ namespace GOObra.View
         {
             GeraReltatorioComprador();
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                //string[] vetor = Directory.GetCurrentDirectory().ToString().Split('\\');
+
+                //string caminhoProjeto = $"{Directory.GetCurrentDirectory().ToString()}\\Dados\\goobra.sqlite";
+                //string caminhoSalva = $"{vetor[0]}\\{vetor[1]}\\{vetor[2]}\\";
+                //File.Copy(caminhoProjeto, caminhoSalva, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnTeste_Click(object sender, EventArgs e)
+        {
+            string[] vetor = Directory.GetCurrentDirectory().ToString().Split('\\');
+
+            string caminho = $"{vetor[0]}\\{vetor[1]}\\{vetor[2]}\\";
+            MessageBox.Show( $"{Directory.GetCurrentDirectory().ToString()}\\Dados\\goobra.sqlite");
+        }
     }
 }

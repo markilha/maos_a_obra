@@ -42,6 +42,7 @@
             this.SidebarWrapper = new System.Windows.Forms.Panel();
             this.Sidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.subMenuRelatorio = new System.Windows.Forms.Panel();
+            this.btnRolComprador = new System.Windows.Forms.Button();
             this.btnOrdem = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -74,7 +75,7 @@
             this.animacaoSidebar = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.animacaoSidebarBack = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radioPainelForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnRolComprador = new System.Windows.Forms.Button();
+            this.btnTeste = new System.Windows.Forms.Button();
             this.MenuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
@@ -174,11 +175,11 @@
             this.label1.AutoSize = true;
             this.animacaoSidebar.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(83, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 26);
+            this.label1.Size = new System.Drawing.Size(207, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "GERENCIADOR DE OBRA";
             // 
@@ -215,6 +216,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Sidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sidebar.BackgroundImage")));
             this.Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Sidebar.Controls.Add(this.btnTeste);
             this.Sidebar.Controls.Add(this.subMenuRelatorio);
             this.Sidebar.Controls.Add(this.btnRelatorio);
             this.Sidebar.Controls.Add(this.subMenuGrafico);
@@ -253,6 +255,26 @@
             this.subMenuRelatorio.Name = "subMenuRelatorio";
             this.subMenuRelatorio.Size = new System.Drawing.Size(270, 169);
             this.subMenuRelatorio.TabIndex = 20;
+            // 
+            // btnRolComprador
+            // 
+            this.animacaoSidebar.SetDecoration(this.btnRolComprador, BunifuAnimatorNS.DecorationType.None);
+            this.animacaoSidebarBack.SetDecoration(this.btnRolComprador, BunifuAnimatorNS.DecorationType.None);
+            this.btnRolComprador.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRolComprador.FlatAppearance.BorderSize = 0;
+            this.btnRolComprador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnRolComprador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnRolComprador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRolComprador.ForeColor = System.Drawing.Color.Silver;
+            this.btnRolComprador.Location = new System.Drawing.Point(0, 120);
+            this.btnRolComprador.Name = "btnRolComprador";
+            this.btnRolComprador.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnRolComprador.Size = new System.Drawing.Size(270, 40);
+            this.btnRolComprador.TabIndex = 21;
+            this.btnRolComprador.Text = "Por Comprador";
+            this.btnRolComprador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRolComprador.UseVisualStyleBackColor = true;
+            this.btnRolComprador.Click += new System.EventHandler(this.btnRolComprador_Click);
             // 
             // btnOrdem
             // 
@@ -809,11 +831,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.animacaoSidebar.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(75, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 26);
+            this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "M4RC0 C0D3";
             // 
@@ -908,25 +930,17 @@
             this.radioPainelForm.ElipseRadius = 7;
             this.radioPainelForm.TargetControl = this.panelChildForm;
             // 
-            // btnRolComprador
+            // btnTeste
             // 
-            this.animacaoSidebar.SetDecoration(this.btnRolComprador, BunifuAnimatorNS.DecorationType.None);
-            this.animacaoSidebarBack.SetDecoration(this.btnRolComprador, BunifuAnimatorNS.DecorationType.None);
-            this.btnRolComprador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRolComprador.FlatAppearance.BorderSize = 0;
-            this.btnRolComprador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnRolComprador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnRolComprador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRolComprador.ForeColor = System.Drawing.Color.Silver;
-            this.btnRolComprador.Location = new System.Drawing.Point(0, 120);
-            this.btnRolComprador.Name = "btnRolComprador";
-            this.btnRolComprador.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRolComprador.Size = new System.Drawing.Size(270, 40);
-            this.btnRolComprador.TabIndex = 21;
-            this.btnRolComprador.Text = "Por Comprador";
-            this.btnRolComprador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRolComprador.UseVisualStyleBackColor = true;
-            this.btnRolComprador.Click += new System.EventHandler(this.btnRolComprador_Click);
+            this.animacaoSidebar.SetDecoration(this.btnTeste, BunifuAnimatorNS.DecorationType.None);
+            this.animacaoSidebarBack.SetDecoration(this.btnTeste, BunifuAnimatorNS.DecorationType.None);
+            this.btnTeste.Location = new System.Drawing.Point(17, 564);
+            this.btnTeste.Name = "btnTeste";
+            this.btnTeste.Size = new System.Drawing.Size(125, 28);
+            this.btnTeste.TabIndex = 0;
+            this.btnTeste.Text = "button7";
+            this.btnTeste.UseVisualStyleBackColor = true;
+            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
             // 
             // Principal
             // 
@@ -943,6 +957,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.MenuTop.ResumeLayout(false);
             this.MenuTop.PerformLayout();
@@ -1010,5 +1025,6 @@
         private System.Windows.Forms.Button btnOrdem;
         private System.Windows.Forms.Button btnCompradores;
         private System.Windows.Forms.Button btnRolComprador;
+        private System.Windows.Forms.Button btnTeste;
     }
 }

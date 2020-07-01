@@ -87,6 +87,7 @@
     <Compile Include="frmBD.Designer.cs">
       <DependentUpon>frmBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\cl_Uteis.cs" />
     <Compile Include="Model\cl_Variaveis.cs" />
     <Compile Include="Model\EntradaModel.cs" />
     <Compile Include="Model\FornecedorModel.cs" />
