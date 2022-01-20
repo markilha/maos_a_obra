@@ -117,7 +117,7 @@ namespace GOObra.View
                 foreach (string item in lista)
                 {
                     double valor = 0;
-                    DataTable valores = EntradaController.GetSqlEntradas($"SELECT Total FROM Entradas WHERE {Campo} = '{item}' ORDER BY {Campo}");
+                    DataTable valores = EntradaController.GetSqlEntradas($"SELECT Total FROM Entradas WHERE UPPER({Campo}) = '{item.ToUpper()}' ORDER BY {Campo}");
                     string eixoY = item;
 
                     #region Busca

@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Calculo.cs" />
+    <Compile Include="Controller\CategoriaController.cs" />
     <Compile Include="Controller\DalHelper.cs" />
     <Compile Include="Controller\Diretorio.cs" />
     <Compile Include="Controller\EntradaController.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="frmBD.Designer.cs">
       <DependentUpon>frmBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CategoriaModel.cs" />
     <Compile Include="Model\cl_Uteis.cs" />
     <Compile Include="Model\cl_Variaveis.cs" />
     <Compile Include="Model\EntradaModel.cs" />
@@ -115,6 +117,12 @@
     </Compile>
     <Compile Include="View\frmAlterarBanco.Designer.cs">
       <DependentUpon>frmAlterarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmEditaEntrada.cs">
       <SubType>Form</SubType>
@@ -227,6 +235,9 @@
     </Compile>
     <EmbeddedResource Include="View\frmAlterarBanco.resx">
       <DependentUpon>frmAlterarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEditaEntrada.resx">
       <DependentUpon>frmEditaEntrada.cs</DependentUpon>

@@ -797,5 +797,13 @@ namespace GOObra.View
                 frmErro.Mensagem(ex.Message);
             }
         }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            cl_Variaveis.frmentrada = null;
+            cl_Variaveis.frmprodutoeditar = null;
+            openChildremFormInPanel(new frmCategoria());
+            hideSubMenu(null);
+        }
     }
 }
