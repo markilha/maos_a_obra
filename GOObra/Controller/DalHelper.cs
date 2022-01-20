@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+using System.Data.SQLite;   
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +19,10 @@ namespace GOObra.Controller
 
         public static SQLiteConnection DbConnection()
         {
-            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
-            string caminho = path + @"\Dados\\goobra.sqlite";
+            //string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
+            //string caminho = path + @"\Dados\\goobra.sqlite";
 
-            sqliteConnection = new SQLiteConnection($"Data Source={caminho}; Version=3;");
+            sqliteConnection = new SQLiteConnection($"Data Source={Properties.Settings.Default.PathBanco}; Version=3;");
             sqliteConnection.Open();
             return sqliteConnection;
         }
@@ -31,7 +31,7 @@ namespace GOObra.Controller
             try
             {
                 string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
-                SQLiteConnection.CreateFile(path + @"\Dados\goobra.sqlite");
+                SQLiteConnection.CreateFile(Properties.Settings.Default.PathBanco);
                 frmSuccess.Mensagem("Feito");
             }
             catch (Exception ex)
@@ -53,6 +53,7 @@ namespace GOObra.Controller
 
                     cmd.CommandText = "CREATE TABLE IF NOT EXISTS Fornecedores(Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, NomeFantasia Varchar)";
                     cmd.ExecuteNonQuery();
+                    
 
                     frmSuccess.Mensagem("Feito");
                 }

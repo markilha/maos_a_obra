@@ -70,10 +70,9 @@ namespace GOObra.View
                     this.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                frmErro.Mensagem("Ops! Ocorreu um erro: " + ex);
             }
         }
     }

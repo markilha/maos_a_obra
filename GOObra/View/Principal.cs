@@ -32,6 +32,7 @@ namespace GOObra.View
         private void Principal_Load(object sender, EventArgs e)
         {
             hideSubMenu(null);
+            txtCaminho.Text = Properties.Settings.Default.PathBanco;
         }
         private void Sair_Click(object sender, EventArgs e)
         {
@@ -636,8 +637,6 @@ namespace GOObra.View
                             //Todos as entrada de um determinada data
                             DataTable valores = EntradaController.GetSqlEntradas($"SELECT * FROM Entradas WHERE DataEntrada = '{data}' ORDER BY DataEntrada");
 
-
-
                             //lista de ordens de uma determinada ordem
                             listaOrdens = EntradaController.GetLista("Ordem", "DataEntrada", data);
                             listaOrdens.Sort();
@@ -760,10 +759,43 @@ namespace GOObra.View
 
         private void btnTeste_Click(object sender, EventArgs e)
         {
-            string[] vetor = Directory.GetCurrentDirectory().ToString().Split('\\');
+            //string[] vetor = Directory.GetCurrentDirectory().ToString().Split('\\');
 
-            string caminho = $"{vetor[0]}\\{vetor[1]}\\{vetor[2]}\\";
-            MessageBox.Show( $"{Directory.GetCurrentDirectory().ToString()}\\Dados\\goobra.sqlite");
+            //string caminho = $"{vetor[0]}\\{vetor[1]}\\{vetor[2]}\\";
+            //MessageBox.Show( $"{Directory.GetCurrentDirectory().ToString()}\\Dados\\goobra.sqlite");
+           
+            
+        }
+
+        private void Wrapper_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCarModelo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                OpenFileDialog fileDialog = new OpenFileDialog();
+                fileDialog.Filter = "SQL|*sqlite";               
+                fileDialog.Title = "Selecione o caminho";
+
+                if (fileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtCaminho.Text = fileDialog.FileName;
+                    Properties.Settings.Default.PathBanco = fileDialog.FileName;
+                    Properties.Settings.Default.Save();
+                        
+                }
+
+               
+
+            }
+            catch (Exception ex)
+            {
+                frmErro.Mensagem(ex.Message);
+            }
         }
     }
 }

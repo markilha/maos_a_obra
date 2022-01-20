@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation28 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation27 = new BunifuAnimatorNS.Animation();
             this.MenuTop = new System.Windows.Forms.Panel();
             this.Restaurar = new System.Windows.Forms.PictureBox();
             this.Minimizar = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@
             this.MenuSidebar = new System.Windows.Forms.PictureBox();
             this.SidebarWrapper = new System.Windows.Forms.Panel();
             this.Sidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnTeste = new System.Windows.Forms.Button();
             this.subMenuRelatorio = new System.Windows.Forms.Panel();
             this.btnRolComprador = new System.Windows.Forms.Button();
             this.btnOrdem = new System.Windows.Forms.Button();
@@ -75,7 +76,9 @@
             this.animacaoSidebar = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.animacaoSidebarBack = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radioPainelForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnTeste = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCaminho = new System.Windows.Forms.TextBox();
+            this.btnCarModelo = new System.Windows.Forms.Button();
             this.MenuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
@@ -90,6 +93,7 @@
             this.subMenuCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Wrapper.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuTop
@@ -105,8 +109,9 @@
             this.animacaoSidebar.SetDecoration(this.MenuTop, BunifuAnimatorNS.DecorationType.None);
             this.MenuTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.MenuTop.Location = new System.Drawing.Point(0, 0);
+            this.MenuTop.Margin = new System.Windows.Forms.Padding(4);
             this.MenuTop.Name = "MenuTop";
-            this.MenuTop.Size = new System.Drawing.Size(1386, 56);
+            this.MenuTop.Size = new System.Drawing.Size(1848, 69);
             this.MenuTop.TabIndex = 0;
             // 
             // Restaurar
@@ -116,9 +121,10 @@
             this.animacaoSidebar.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.Restaurar, BunifuAnimatorNS.DecorationType.None);
             this.Restaurar.Image = ((System.Drawing.Image)(resources.GetObject("Restaurar.Image")));
-            this.Restaurar.Location = new System.Drawing.Point(1309, 14);
+            this.Restaurar.Location = new System.Drawing.Point(1745, 17);
+            this.Restaurar.Margin = new System.Windows.Forms.Padding(4);
             this.Restaurar.Name = "Restaurar";
-            this.Restaurar.Size = new System.Drawing.Size(30, 30);
+            this.Restaurar.Size = new System.Drawing.Size(40, 37);
             this.Restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Restaurar.TabIndex = 5;
             this.Restaurar.TabStop = false;
@@ -132,9 +138,10 @@
             this.animacaoSidebar.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(1274, 14);
+            this.Minimizar.Location = new System.Drawing.Point(1699, 17);
+            this.Minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(30, 30);
+            this.Minimizar.Size = new System.Drawing.Size(40, 37);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Minimizar.TabIndex = 4;
             this.Minimizar.TabStop = false;
@@ -147,9 +154,10 @@
             this.animacaoSidebar.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Maximizar.Image = ((System.Drawing.Image)(resources.GetObject("Maximizar.Image")));
-            this.Maximizar.Location = new System.Drawing.Point(1309, 14);
+            this.Maximizar.Location = new System.Drawing.Point(1745, 17);
+            this.Maximizar.Margin = new System.Windows.Forms.Padding(4);
             this.Maximizar.Name = "Maximizar";
-            this.Maximizar.Size = new System.Drawing.Size(30, 30);
+            this.Maximizar.Size = new System.Drawing.Size(40, 37);
             this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Maximizar.TabIndex = 3;
             this.Maximizar.TabStop = false;
@@ -162,9 +170,10 @@
             this.animacaoSidebar.SetDecoration(this.Sair, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.Sair, BunifuAnimatorNS.DecorationType.None);
             this.Sair.Image = ((System.Drawing.Image)(resources.GetObject("Sair.Image")));
-            this.Sair.Location = new System.Drawing.Point(1344, 14);
+            this.Sair.Location = new System.Drawing.Point(1792, 17);
+            this.Sair.Margin = new System.Windows.Forms.Padding(4);
             this.Sair.Name = "Sair";
-            this.Sair.Size = new System.Drawing.Size(30, 30);
+            this.Sair.Size = new System.Drawing.Size(40, 37);
             this.Sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Sair.TabIndex = 2;
             this.Sair.TabStop = false;
@@ -177,9 +186,10 @@
             this.animacaoSidebarBack.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 18);
+            this.label1.Location = new System.Drawing.Point(111, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 20);
+            this.label1.Size = new System.Drawing.Size(250, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "GERENCIADOR DE OBRA";
             // 
@@ -188,9 +198,10 @@
             this.animacaoSidebar.SetDecoration(this.MenuSidebar, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.MenuSidebar, BunifuAnimatorNS.DecorationType.None);
             this.MenuSidebar.Image = ((System.Drawing.Image)(resources.GetObject("MenuSidebar.Image")));
-            this.MenuSidebar.Location = new System.Drawing.Point(33, 13);
+            this.MenuSidebar.Location = new System.Drawing.Point(44, 16);
+            this.MenuSidebar.Margin = new System.Windows.Forms.Padding(4);
             this.MenuSidebar.Name = "MenuSidebar";
-            this.MenuSidebar.Size = new System.Drawing.Size(30, 30);
+            this.MenuSidebar.Size = new System.Drawing.Size(40, 37);
             this.MenuSidebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MenuSidebar.TabIndex = 0;
             this.MenuSidebar.TabStop = false;
@@ -203,9 +214,10 @@
             this.animacaoSidebarBack.SetDecoration(this.SidebarWrapper, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.SidebarWrapper, BunifuAnimatorNS.DecorationType.None);
             this.SidebarWrapper.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidebarWrapper.Location = new System.Drawing.Point(0, 56);
+            this.SidebarWrapper.Location = new System.Drawing.Point(0, 69);
+            this.SidebarWrapper.Margin = new System.Windows.Forms.Padding(4);
             this.SidebarWrapper.Name = "SidebarWrapper";
-            this.SidebarWrapper.Size = new System.Drawing.Size(300, 732);
+            this.SidebarWrapper.Size = new System.Drawing.Size(400, 901);
             this.SidebarWrapper.TabIndex = 1;
             this.SidebarWrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.SidebarWrapper_Paint);
             // 
@@ -235,11 +247,26 @@
             this.Sidebar.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Sidebar.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Sidebar.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.Sidebar.Location = new System.Drawing.Point(16, 24);
+            this.Sidebar.Location = new System.Drawing.Point(21, 30);
+            this.Sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.Sidebar.Name = "Sidebar";
             this.Sidebar.Quality = 10;
-            this.Sidebar.Size = new System.Drawing.Size(270, 705);
+            this.Sidebar.Size = new System.Drawing.Size(360, 868);
             this.Sidebar.TabIndex = 0;
+            // 
+            // btnTeste
+            // 
+            this.animacaoSidebar.SetDecoration(this.btnTeste, BunifuAnimatorNS.DecorationType.None);
+            this.animacaoSidebarBack.SetDecoration(this.btnTeste, BunifuAnimatorNS.DecorationType.None);
+            this.btnTeste.Location = new System.Drawing.Point(23, 694);
+            this.btnTeste.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTeste.Name = "btnTeste";
+            this.btnTeste.Size = new System.Drawing.Size(167, 34);
+            this.btnTeste.TabIndex = 0;
+            this.btnTeste.Text = "button7";
+            this.btnTeste.UseVisualStyleBackColor = true;
+            this.btnTeste.Visible = false;
+            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
             // 
             // subMenuRelatorio
             // 
@@ -251,9 +278,10 @@
             this.animacaoSidebarBack.SetDecoration(this.subMenuRelatorio, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.subMenuRelatorio, BunifuAnimatorNS.DecorationType.None);
             this.subMenuRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuRelatorio.Location = new System.Drawing.Point(0, 352);
+            this.subMenuRelatorio.Location = new System.Drawing.Point(0, 433);
+            this.subMenuRelatorio.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuRelatorio.Name = "subMenuRelatorio";
-            this.subMenuRelatorio.Size = new System.Drawing.Size(270, 169);
+            this.subMenuRelatorio.Size = new System.Drawing.Size(360, 208);
             this.subMenuRelatorio.TabIndex = 20;
             // 
             // btnRolComprador
@@ -266,10 +294,11 @@
             this.btnRolComprador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnRolComprador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRolComprador.ForeColor = System.Drawing.Color.Silver;
-            this.btnRolComprador.Location = new System.Drawing.Point(0, 120);
+            this.btnRolComprador.Location = new System.Drawing.Point(0, 147);
+            this.btnRolComprador.Margin = new System.Windows.Forms.Padding(4);
             this.btnRolComprador.Name = "btnRolComprador";
-            this.btnRolComprador.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRolComprador.Size = new System.Drawing.Size(270, 40);
+            this.btnRolComprador.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnRolComprador.Size = new System.Drawing.Size(360, 49);
             this.btnRolComprador.TabIndex = 21;
             this.btnRolComprador.Text = "Por Comprador";
             this.btnRolComprador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,10 +315,11 @@
             this.btnOrdem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnOrdem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdem.ForeColor = System.Drawing.Color.Silver;
-            this.btnOrdem.Location = new System.Drawing.Point(0, 80);
+            this.btnOrdem.Location = new System.Drawing.Point(0, 98);
+            this.btnOrdem.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrdem.Name = "btnOrdem";
-            this.btnOrdem.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnOrdem.Size = new System.Drawing.Size(270, 40);
+            this.btnOrdem.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnOrdem.Size = new System.Drawing.Size(360, 49);
             this.btnOrdem.TabIndex = 20;
             this.btnOrdem.Text = "Por Ordem";
             this.btnOrdem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,10 +336,11 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.Silver;
-            this.button5.Location = new System.Drawing.Point(0, 40);
+            this.button5.Location = new System.Drawing.Point(0, 49);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(270, 40);
+            this.button5.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(360, 49);
             this.button5.TabIndex = 19;
             this.button5.Text = "Produtos Utilizados";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -327,9 +358,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Silver;
             this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(270, 40);
+            this.button6.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(360, 49);
             this.button6.TabIndex = 2;
             this.button6.Text = "Por Fornecedor";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -360,13 +392,14 @@
             this.btnRelatorio.IconVisible = true;
             this.btnRelatorio.IconZoom = 50D;
             this.btnRelatorio.IsTab = false;
-            this.btnRelatorio.Location = new System.Drawing.Point(0, 304);
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 374);
+            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(5);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Normalcolor = System.Drawing.Color.Transparent;
             this.btnRelatorio.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnRelatorio.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRelatorio.selected = false;
-            this.btnRelatorio.Size = new System.Drawing.Size(270, 48);
+            this.btnRelatorio.Size = new System.Drawing.Size(360, 59);
             this.btnRelatorio.TabIndex = 19;
             this.btnRelatorio.Text = "       RELATÓRIOS";
             this.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -386,9 +419,10 @@
             this.animacaoSidebarBack.SetDecoration(this.subMenuGrafico, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.subMenuGrafico, BunifuAnimatorNS.DecorationType.None);
             this.subMenuGrafico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuGrafico.Location = new System.Drawing.Point(0, 274);
+            this.subMenuGrafico.Location = new System.Drawing.Point(0, 337);
+            this.subMenuGrafico.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuGrafico.Name = "subMenuGrafico";
-            this.subMenuGrafico.Size = new System.Drawing.Size(270, 30);
+            this.subMenuGrafico.Size = new System.Drawing.Size(360, 37);
             this.subMenuGrafico.TabIndex = 18;
             // 
             // btnCompradores
@@ -401,10 +435,11 @@
             this.btnCompradores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnCompradores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompradores.ForeColor = System.Drawing.Color.Silver;
-            this.btnCompradores.Location = new System.Drawing.Point(0, 134);
+            this.btnCompradores.Location = new System.Drawing.Point(0, 165);
+            this.btnCompradores.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompradores.Name = "btnCompradores";
-            this.btnCompradores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCompradores.Size = new System.Drawing.Size(270, 26);
+            this.btnCompradores.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnCompradores.Size = new System.Drawing.Size(360, 32);
             this.btnCompradores.TabIndex = 21;
             this.btnCompradores.Text = "Compradores";
             this.btnCompradores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,10 +456,11 @@
             this.btnGrafVariacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnGrafVariacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrafVariacao.ForeColor = System.Drawing.Color.Silver;
-            this.btnGrafVariacao.Location = new System.Drawing.Point(0, 108);
+            this.btnGrafVariacao.Location = new System.Drawing.Point(0, 133);
+            this.btnGrafVariacao.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrafVariacao.Name = "btnGrafVariacao";
-            this.btnGrafVariacao.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnGrafVariacao.Size = new System.Drawing.Size(270, 26);
+            this.btnGrafVariacao.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnGrafVariacao.Size = new System.Drawing.Size(360, 32);
             this.btnGrafVariacao.TabIndex = 20;
             this.btnGrafVariacao.Text = "Variação Preço";
             this.btnGrafVariacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -441,10 +477,11 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(0, 82);
+            this.button4.Location = new System.Drawing.Point(0, 101);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(270, 26);
+            this.button4.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(360, 32);
             this.button4.TabIndex = 19;
             this.button4.Text = "Mão de Obra X Materiais";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -461,10 +498,11 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(0, 56);
+            this.button1.Location = new System.Drawing.Point(0, 69);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(270, 26);
+            this.button1.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(360, 32);
             this.button1.TabIndex = 2;
             this.button1.Text = "Por Categoria";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -481,10 +519,11 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(0, 30);
+            this.button2.Location = new System.Drawing.Point(0, 37);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(270, 26);
+            this.button2.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(360, 32);
             this.button2.TabIndex = 1;
             this.button2.Text = "Por Ordem";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -502,9 +541,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Silver;
             this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(270, 30);
+            this.button3.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(360, 37);
             this.button3.TabIndex = 0;
             this.button3.Text = "Por Fornedor";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -535,13 +575,14 @@
             this.btnGrafico.IconVisible = true;
             this.btnGrafico.IconZoom = 50D;
             this.btnGrafico.IsTab = false;
-            this.btnGrafico.Location = new System.Drawing.Point(0, 226);
+            this.btnGrafico.Location = new System.Drawing.Point(0, 278);
+            this.btnGrafico.Margin = new System.Windows.Forms.Padding(5);
             this.btnGrafico.Name = "btnGrafico";
             this.btnGrafico.Normalcolor = System.Drawing.Color.Transparent;
             this.btnGrafico.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnGrafico.OnHoverTextColor = System.Drawing.Color.White;
             this.btnGrafico.selected = false;
-            this.btnGrafico.Size = new System.Drawing.Size(270, 48);
+            this.btnGrafico.Size = new System.Drawing.Size(360, 59);
             this.btnGrafico.TabIndex = 17;
             this.btnGrafico.Text = "       GRÁFICO";
             this.btnGrafico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -558,9 +599,10 @@
             this.animacaoSidebarBack.SetDecoration(this.subMenuConsulta, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.subMenuConsulta, BunifuAnimatorNS.DecorationType.None);
             this.subMenuConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuConsulta.Location = new System.Drawing.Point(0, 184);
+            this.subMenuConsulta.Location = new System.Drawing.Point(0, 226);
+            this.subMenuConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuConsulta.Name = "subMenuConsulta";
-            this.subMenuConsulta.Size = new System.Drawing.Size(270, 42);
+            this.subMenuConsulta.Size = new System.Drawing.Size(360, 52);
             this.subMenuConsulta.TabIndex = 16;
             // 
             // btnConOrdem
@@ -573,10 +615,11 @@
             this.btnConOrdem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnConOrdem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConOrdem.ForeColor = System.Drawing.Color.Silver;
-            this.btnConOrdem.Location = new System.Drawing.Point(0, 80);
+            this.btnConOrdem.Location = new System.Drawing.Point(0, 98);
+            this.btnConOrdem.Margin = new System.Windows.Forms.Padding(4);
             this.btnConOrdem.Name = "btnConOrdem";
-            this.btnConOrdem.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnConOrdem.Size = new System.Drawing.Size(270, 40);
+            this.btnConOrdem.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnConOrdem.Size = new System.Drawing.Size(360, 49);
             this.btnConOrdem.TabIndex = 2;
             this.btnConOrdem.Text = "Ordens";
             this.btnConOrdem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -593,10 +636,11 @@
             this.btnConfornecedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnConfornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfornecedores.ForeColor = System.Drawing.Color.Silver;
-            this.btnConfornecedores.Location = new System.Drawing.Point(0, 40);
+            this.btnConfornecedores.Location = new System.Drawing.Point(0, 49);
+            this.btnConfornecedores.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfornecedores.Name = "btnConfornecedores";
-            this.btnConfornecedores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnConfornecedores.Size = new System.Drawing.Size(270, 40);
+            this.btnConfornecedores.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnConfornecedores.Size = new System.Drawing.Size(360, 49);
             this.btnConfornecedores.TabIndex = 1;
             this.btnConfornecedores.Text = "Fonecedores";
             this.btnConfornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -614,9 +658,10 @@
             this.btnConProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConProdutos.ForeColor = System.Drawing.Color.Silver;
             this.btnConProdutos.Location = new System.Drawing.Point(0, 0);
+            this.btnConProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.btnConProdutos.Name = "btnConProdutos";
-            this.btnConProdutos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnConProdutos.Size = new System.Drawing.Size(270, 40);
+            this.btnConProdutos.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnConProdutos.Size = new System.Drawing.Size(360, 49);
             this.btnConProdutos.TabIndex = 0;
             this.btnConProdutos.Text = "Produtos";
             this.btnConProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -647,13 +692,14 @@
             this.btnConsulta.IconVisible = true;
             this.btnConsulta.IconZoom = 50D;
             this.btnConsulta.IsTab = false;
-            this.btnConsulta.Location = new System.Drawing.Point(0, 136);
+            this.btnConsulta.Location = new System.Drawing.Point(0, 167);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(5);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Normalcolor = System.Drawing.Color.Transparent;
             this.btnConsulta.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnConsulta.OnHoverTextColor = System.Drawing.Color.White;
             this.btnConsulta.selected = false;
-            this.btnConsulta.Size = new System.Drawing.Size(270, 48);
+            this.btnConsulta.Size = new System.Drawing.Size(360, 59);
             this.btnConsulta.TabIndex = 15;
             this.btnConsulta.Text = "       CONSULTAR";
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -670,9 +716,10 @@
             this.animacaoSidebarBack.SetDecoration(this.subMenuCadastro, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.subMenuCadastro, BunifuAnimatorNS.DecorationType.None);
             this.subMenuCadastro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuCadastro.Location = new System.Drawing.Point(0, 96);
+            this.subMenuCadastro.Location = new System.Drawing.Point(0, 118);
+            this.subMenuCadastro.Margin = new System.Windows.Forms.Padding(4);
             this.subMenuCadastro.Name = "subMenuCadastro";
-            this.subMenuCadastro.Size = new System.Drawing.Size(270, 40);
+            this.subMenuCadastro.Size = new System.Drawing.Size(360, 49);
             this.subMenuCadastro.TabIndex = 14;
             // 
             // btnAltera
@@ -685,10 +732,11 @@
             this.btnAltera.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAltera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltera.ForeColor = System.Drawing.Color.Silver;
-            this.btnAltera.Location = new System.Drawing.Point(0, 80);
+            this.btnAltera.Location = new System.Drawing.Point(0, 98);
+            this.btnAltera.Margin = new System.Windows.Forms.Padding(4);
             this.btnAltera.Name = "btnAltera";
-            this.btnAltera.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAltera.Size = new System.Drawing.Size(270, 40);
+            this.btnAltera.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnAltera.Size = new System.Drawing.Size(360, 49);
             this.btnAltera.TabIndex = 2;
             this.btnAltera.Text = "Alterar Banco de Dados";
             this.btnAltera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -705,10 +753,11 @@
             this.btnCadFornecedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnCadFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadFornecedores.ForeColor = System.Drawing.Color.Silver;
-            this.btnCadFornecedores.Location = new System.Drawing.Point(0, 40);
+            this.btnCadFornecedores.Location = new System.Drawing.Point(0, 49);
+            this.btnCadFornecedores.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadFornecedores.Name = "btnCadFornecedores";
-            this.btnCadFornecedores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCadFornecedores.Size = new System.Drawing.Size(270, 40);
+            this.btnCadFornecedores.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnCadFornecedores.Size = new System.Drawing.Size(360, 49);
             this.btnCadFornecedores.TabIndex = 1;
             this.btnCadFornecedores.Text = "Fonecedores";
             this.btnCadFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -726,9 +775,10 @@
             this.btnCadProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadProduto.ForeColor = System.Drawing.Color.Silver;
             this.btnCadProduto.Location = new System.Drawing.Point(0, 0);
+            this.btnCadProduto.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadProduto.Name = "btnCadProduto";
-            this.btnCadProduto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCadProduto.Size = new System.Drawing.Size(270, 40);
+            this.btnCadProduto.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnCadProduto.Size = new System.Drawing.Size(360, 49);
             this.btnCadProduto.TabIndex = 0;
             this.btnCadProduto.Text = "Produtos";
             this.btnCadProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -759,13 +809,14 @@
             this.btnCadastro.IconVisible = true;
             this.btnCadastro.IconZoom = 50D;
             this.btnCadastro.IsTab = false;
-            this.btnCadastro.Location = new System.Drawing.Point(0, 48);
+            this.btnCadastro.Location = new System.Drawing.Point(0, 59);
+            this.btnCadastro.Margin = new System.Windows.Forms.Padding(5);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Normalcolor = System.Drawing.Color.Transparent;
             this.btnCadastro.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnCadastro.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCadastro.selected = false;
-            this.btnCadastro.Size = new System.Drawing.Size(270, 48);
+            this.btnCadastro.Size = new System.Drawing.Size(360, 59);
             this.btnCadastro.TabIndex = 10;
             this.btnCadastro.Text = "       CADASTRO";
             this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -798,12 +849,14 @@
             this.bntEntrada.IconZoom = 50D;
             this.bntEntrada.IsTab = false;
             this.bntEntrada.Location = new System.Drawing.Point(0, 0);
+            this.bntEntrada.Margin = new System.Windows.Forms.Padding(5);
             this.bntEntrada.Name = "bntEntrada";
             this.bntEntrada.Normalcolor = System.Drawing.Color.Transparent;
             this.bntEntrada.OnHovercolor = System.Drawing.Color.Transparent;
             this.bntEntrada.OnHoverTextColor = System.Drawing.Color.White;
+            this.bntEntrada.Padding = new System.Windows.Forms.Padding(2);
             this.bntEntrada.selected = false;
-            this.bntEntrada.Size = new System.Drawing.Size(270, 48);
+            this.bntEntrada.Size = new System.Drawing.Size(360, 59);
             this.bntEntrada.TabIndex = 9;
             this.bntEntrada.Text = "       ENTRADA";
             this.bntEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -818,9 +871,10 @@
             this.animacaoSidebar.SetDecoration(this.LineSidebar, BunifuAnimatorNS.DecorationType.None);
             this.LineSidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.LineSidebar.LineThickness = 1;
-            this.LineSidebar.Location = new System.Drawing.Point(9, 53);
+            this.LineSidebar.Location = new System.Drawing.Point(12, 65);
+            this.LineSidebar.Margin = new System.Windows.Forms.Padding(5);
             this.LineSidebar.Name = "LineSidebar";
-            this.LineSidebar.Size = new System.Drawing.Size(204, 1);
+            this.LineSidebar.Size = new System.Drawing.Size(272, 1);
             this.LineSidebar.TabIndex = 8;
             this.LineSidebar.Transparency = 255;
             this.LineSidebar.Vertical = false;
@@ -833,9 +887,10 @@
             this.animacaoSidebarBack.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(75, 15);
+            this.label2.Location = new System.Drawing.Point(100, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.Size = new System.Drawing.Size(135, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "M4RC0 C0D3";
             // 
@@ -845,9 +900,10 @@
             this.animacaoSidebar.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -855,14 +911,17 @@
             // Wrapper
             // 
             this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.Wrapper.Controls.Add(this.panel1);
             this.Wrapper.Controls.Add(this.panelChildForm);
             this.animacaoSidebarBack.SetDecoration(this.Wrapper, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.Wrapper, BunifuAnimatorNS.DecorationType.None);
             this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Wrapper.Location = new System.Drawing.Point(300, 56);
+            this.Wrapper.Location = new System.Drawing.Point(400, 69);
+            this.Wrapper.Margin = new System.Windows.Forms.Padding(4);
             this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(1086, 732);
+            this.Wrapper.Size = new System.Drawing.Size(1448, 901);
             this.Wrapper.TabIndex = 2;
+            this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Wrapper_Paint);
             // 
             // panelChildForm
             // 
@@ -873,9 +932,10 @@
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
             this.animacaoSidebarBack.SetDecoration(this.panelChildForm, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebar.SetDecoration(this.panelChildForm, BunifuAnimatorNS.DecorationType.None);
-            this.panelChildForm.Location = new System.Drawing.Point(22, 24);
+            this.panelChildForm.Location = new System.Drawing.Point(29, 30);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1041, 687);
+            this.panelChildForm.Size = new System.Drawing.Size(1388, 808);
             this.panelChildForm.TabIndex = 0;
             // 
             // CurvaSidebar
@@ -887,72 +947,105 @@
             // 
             this.animacaoSidebar.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.animacaoSidebar.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.animacaoSidebar.DefaultAnimation = animation1;
+            animation28.AnimateOnlyDifferences = true;
+            animation28.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.BlindCoeff")));
+            animation28.LeafCoeff = 0F;
+            animation28.MaxTime = 1F;
+            animation28.MinTime = 0F;
+            animation28.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.MosaicCoeff")));
+            animation28.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation28.MosaicShift")));
+            animation28.MosaicSize = 1;
+            animation28.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation28.RotateCoeff = 0F;
+            animation28.RotateLimit = 0F;
+            animation28.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.ScaleCoeff")));
+            animation28.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.SlideCoeff")));
+            animation28.TimeCoeff = 2F;
+            animation28.TransparencyCoeff = 0F;
+            this.animacaoSidebar.DefaultAnimation = animation28;
             // 
             // animacaoSidebarBack
             // 
             this.animacaoSidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.animacaoSidebarBack.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.animacaoSidebarBack.DefaultAnimation = animation2;
+            animation27.AnimateOnlyDifferences = true;
+            animation27.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation27.BlindCoeff")));
+            animation27.LeafCoeff = 0F;
+            animation27.MaxTime = 1F;
+            animation27.MinTime = 0F;
+            animation27.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation27.MosaicCoeff")));
+            animation27.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation27.MosaicShift")));
+            animation27.MosaicSize = 0;
+            animation27.Padding = new System.Windows.Forms.Padding(0);
+            animation27.RotateCoeff = 0F;
+            animation27.RotateLimit = 0F;
+            animation27.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation27.ScaleCoeff")));
+            animation27.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation27.SlideCoeff")));
+            animation27.TimeCoeff = 0F;
+            animation27.TransparencyCoeff = 0F;
+            this.animacaoSidebarBack.DefaultAnimation = animation27;
             // 
             // radioPainelForm
             // 
             this.radioPainelForm.ElipseRadius = 7;
             this.radioPainelForm.TargetControl = this.panelChildForm;
             // 
-            // btnTeste
+            // panel1
             // 
-            this.animacaoSidebar.SetDecoration(this.btnTeste, BunifuAnimatorNS.DecorationType.None);
-            this.animacaoSidebarBack.SetDecoration(this.btnTeste, BunifuAnimatorNS.DecorationType.None);
-            this.btnTeste.Location = new System.Drawing.Point(17, 564);
-            this.btnTeste.Name = "btnTeste";
-            this.btnTeste.Size = new System.Drawing.Size(125, 28);
-            this.btnTeste.TabIndex = 0;
-            this.btnTeste.Text = "button7";
-            this.btnTeste.UseVisualStyleBackColor = true;
-            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnCarModelo);
+            this.panel1.Controls.Add(this.txtCaminho);
+            this.animacaoSidebarBack.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.animacaoSidebar.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.panel1.Location = new System.Drawing.Point(29, 852);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1388, 37);
+            this.panel1.TabIndex = 1;
+            // 
+            // txtCaminho
+            // 
+            this.txtCaminho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCaminho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.txtCaminho.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.animacaoSidebar.SetDecoration(this.txtCaminho, BunifuAnimatorNS.DecorationType.None);
+            this.animacaoSidebarBack.SetDecoration(this.txtCaminho, BunifuAnimatorNS.DecorationType.None);
+            this.txtCaminho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCaminho.ForeColor = System.Drawing.Color.Chartreuse;
+            this.txtCaminho.Location = new System.Drawing.Point(301, 8);
+            this.txtCaminho.Name = "txtCaminho";
+            this.txtCaminho.Size = new System.Drawing.Size(1055, 19);
+            this.txtCaminho.TabIndex = 0;
+            // 
+            // btnCarModelo
+            // 
+            this.btnCarModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.animacaoSidebar.SetDecoration(this.btnCarModelo, BunifuAnimatorNS.DecorationType.None);
+            this.animacaoSidebarBack.SetDecoration(this.btnCarModelo, BunifuAnimatorNS.DecorationType.None);
+            this.btnCarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarModelo.ForeColor = System.Drawing.Color.White;
+            this.btnCarModelo.Location = new System.Drawing.Point(2, 5);
+            this.btnCarModelo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnCarModelo.Name = "btnCarModelo";
+            this.btnCarModelo.Size = new System.Drawing.Size(271, 31);
+            this.btnCarModelo.TabIndex = 76;
+            this.btnCarModelo.Text = "Caminho do Banco";
+            this.btnCarModelo.UseVisualStyleBackColor = true;
+            this.btnCarModelo.Click += new System.EventHandler(this.btnCarModelo_Click);
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1848, 970);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.SidebarWrapper);
             this.Controls.Add(this.MenuTop);
             this.animacaoSidebar.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.animacaoSidebarBack.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -976,6 +1069,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Wrapper.ResumeLayout(false);
             this.Wrapper.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1026,5 +1121,8 @@
         private System.Windows.Forms.Button btnCompradores;
         private System.Windows.Forms.Button btnRolComprador;
         private System.Windows.Forms.Button btnTeste;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCaminho;
+        private System.Windows.Forms.Button btnCarModelo;
     }
 }
